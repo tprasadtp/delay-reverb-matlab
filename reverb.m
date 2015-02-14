@@ -1,5 +1,5 @@
 %%this is asimple matlab  code to generate reverb using delay
-song=wavread('%Path%');
+song=wavread('%Path%'); %% Mention  file path 
 left=song(:,1);
 right=song(:,1);
 z=zeros((44100/8),1);%Delay 44100/8 samples
@@ -41,4 +41,4 @@ play=l1+l2+l3+l4;
 play2=r1+r2+r3+r4;
 final=cat(2,play,play2);
 sound(final,44100);
-wavwrite(final,44100,32,'delyecho.wav')
+wavwrite(final,44100,32,'delyecho.wav') %%output file written to current directory
